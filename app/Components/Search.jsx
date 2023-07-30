@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { WeatherData } from "../api";
@@ -28,7 +28,10 @@ const Search = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-row">
+        <div className="grid grid-flow-row gap-2 ">
+          <label className="opacity-50 text-sm sm:text-base">
+            Nome da cidade:
+          </label>
           <input
             type="text"
             value={cidade}
@@ -36,7 +39,7 @@ const Search = () => {
             onChange={handleChange}
             className="w-full mr-4 px-4 py-2 rounded border focus:border-teal-500 focus:outline-none"
           />
-          <button className="bg-teal-800 hover:bg-teal-900 text-teal-100 px-4 py-2 rounded shadow">
+          <button className="mt-4 bg-teal-800 hover:bg-teal-900 text-teal-100 px-4 py-2 rounded shadow">
             Pesquisar
           </button>
         </div>
